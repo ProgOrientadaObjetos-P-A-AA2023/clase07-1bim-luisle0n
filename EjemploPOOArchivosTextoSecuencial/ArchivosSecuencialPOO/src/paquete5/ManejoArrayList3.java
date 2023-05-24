@@ -15,7 +15,7 @@ import paquete1.Profesor;
  */
 public class ManejoArrayList3 {
     public static void main(String[] args) {
-        
+        double pro=0;
         Calificacion c1 = new Calificacion(10, "Base de Datos");
         Calificacion c2 = new Calificacion(9, "Matemáticas");
         Calificacion c3 = new Calificacion(7, "Lógica");
@@ -29,19 +29,22 @@ public class ManejoArrayList3 {
         c3.establecerProfesor(prof3);
         
         
-        // ArrayList
+        
+        // ArrayList no es necesario ingresar valores 
         ArrayList <Calificacion> calificaciones = new ArrayList<>();
         calificaciones.add(c1);
         calificaciones.add(c2);
         calificaciones.add(c3);
-        
+        // size para obtener el tamaño del arreglo y la aaralits me obloga a utilizar un size
         for (int i = 0; i < calificaciones.size(); i++) {
             System.out.printf("%s - %s - %.2f\n", 
                     calificaciones.get(i).obtenerProfesor().obtenerNombre(), 
                     calificaciones.get(i).obtenerNombreMateria(),
                     calificaciones.get(i).obtenerNota());
+                    pro= pro+calificaciones.get(i).obtenerNota();
         }
         
-        
+        pro=pro/calificaciones.size();
+        System.out.printf("El promedio de las calificacion es: %.1f\n",pro);
     }
 }

@@ -8,7 +8,7 @@ package paquete1;
 import java.io.Serializable;
 
 public class Calificacion implements Serializable {
-
+   
     private double nota;
     private String nombreMateria;
     private Profesor profesor;
